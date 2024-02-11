@@ -4,6 +4,12 @@
     <title></title>
 </head>
 <body>
+<h1>All Events</h1>
+
+<nav th:replace="fragments :: navigation"></nav>
+
+<p th:unless="${events} and ${events.size()}">No events!</p>
+
 <ul>
 <!--    loop over events (the arraylist in EventController class) displaying each event name-->
     <th:block th:each="event : ${events}">
