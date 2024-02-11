@@ -1,0 +1,14 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body>
+<ul>
+<!--    loop over events (the arraylist in EventController class) displaying each event name-->
+    <th:block th:each="event : ${events}">
+    <li th:text="${events}"></li>
+    </th:block>
+</ul>
+</body>
+</html>
