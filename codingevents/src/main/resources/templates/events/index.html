@@ -7,7 +7,8 @@
 <ul>
 <!--    loop over events (the arraylist in EventController class) displaying each event name-->
     <th:block th:each="event : ${events}">
-    <li th:text="${events}"></li>
+<!--    The parameter name for each event should go in quotations Example: th:text="${parameter name}"    -->
+    <li th:text="${event}"></li>
     </th:block>
 </ul>
 </body>
