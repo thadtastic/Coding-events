@@ -26,7 +26,7 @@ public class EventController {
     //lives at /events/create
     @GetMapping("create")
     public String renderCreateEventForm(){
-    return "events/create";
+    return "create";
     }
     // method below handles a different kind of request and can be placed at the same path
     // processes form after user clicks submit, PostMapping annotation needed for this
@@ -34,7 +34,7 @@ public class EventController {
 public String createEvent(@RequestParam String eventName){ // eventName must match name attribute of input elements:  <input type ="text" name="eventName">
         events.add(eventName);
         //the return redirects to the root path, which is events
-        return "redirect:";
+        return "redirect:/events";
     }
 
 }
